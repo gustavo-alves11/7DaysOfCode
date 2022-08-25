@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DaysOfCode</title>
+</head>
+<body>
+    <script>
+        principal();
+        function BackFront(){
+            resposta = prompt("Digite se quer estudar Back-End ou Front-End:")
+            return resposta;
+        }
+
+        function linguagemFront(){
+            var resposta = prompt("Você escolhe Vue ou React?:")
+            addLanguage();
+            return resposta;
+        }
+
+        function linguagemBack(){
+            var resposta = prompt("Você escolhe C# ou Java?:")
+            addLanguage();
+            return resposta;        
+        }
+
+        function principal(){
+            var resposta = BackFront()
+            console.log(resposta)
+            if (resposta === "Back-End"){
+                linguagemBack()
+            } 
+            else {
+                linguagemFront()
+                
+            }
+        }
+        function addLanguage(){
+            let resposta = "Primeira";
+            while (!(resposta == "")) {
+                resposta = prompt("Digite uma nova linguagem")
+                
+            }
+        }
+    </script>
+</body>
+</html>

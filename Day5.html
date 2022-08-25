@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var lista = {
+            Frutas : [],
+            Laticinios : [],
+            Congelados: [],
+            Doces: []
+            }
+    
+
+            add = prompt("Gostaria de add um produto a lista? (Sim ou Não): ");    
+            
+        while (add == "Sim") {
+            let produto = prompt("Qual o nome do produto");    
+            var categoria = prompt("Qual a categoria desse produto? (Frutas, Laticinios, Congelados, Doces");    
+            lista[categoria].push(produto)
+    
+            add = prompt("Gostaria de add mais um produto a lista? (Sim ou Não): ");    
+            
+            if (add == "Não"){
+            alert(`      
+            Frutas: ${lista.Frutas}
+
+            Laticinios: ${lista.Laticinios}
+            
+            Congelados: ${lista.Congelados}
+            
+            Doces: ${lista.Doces}
+            `)
+            }
+        
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2DayOfCode</title>
+</head>
+<body>
+    <form onsubmit="exibir(event)">
+        
+        <label>Digite seu nome:</label>
+        <input type="text" required id="name" ><br>
+        
+        <label>Digite sua idade:</label>
+        <input type="number" required id="age"><br>
+        
+        <label>Digite qual liguagem você estuda:</label>
+        <input type="text" required id="language">
+        
+        <button type="submit" >Enviar</button>    
+    </form>
+    
+
+    <script>
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var language = document.getElementById('language').value;
+        
+        function exibir(event){
+            
+                event.preventDefault();
+                console.log(name)
+                let resposta = prompt(`Olá ${name}, você tem ${age} e está aprendendo ${language}. 
+                Você gosta de estudar ${language}? (Digite "1" para "sim" e "2" para "não"`);
+
+                if(resposta == 1){
+                    alert("Muito Bem! Continue assim!")
+                }
+                else if(resposta == 2) {
+                    alert("Ahh que pena, tente conhecer outras linguagens!")
+                }
+            }
+
+        // function validaCampos(){
+        //     if(name == '' || age =='' || language==''){
+        //        let Msg= "Campos Obrigatórios"
+
+        //     }
+
+        // }
+    </script>
+</body>
+</html>
